@@ -1,0 +1,11 @@
+# Scan output is machine- and run-specific.
+/data/
+
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+.venv/
+.DS_Store

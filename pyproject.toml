@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ioc-remedy"
+version = "0.1.0"
+description = "Find, verify and remediate an injected supply-chain payload across GitHub repositories"
+readme = "README.md"
+requires-python = ">=3.8"
+keywords = ["security", "supply-chain", "incident-response", "github"]
+classifiers = [
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Topic :: Security",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+ioc-remedy = "ioc_remedy.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# Makes `pytest` work in a fresh clone with no install step.
+pythonpath = ["src"]
