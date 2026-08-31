@@ -1,5 +1,9 @@
 # ioc-remedy
 
+[![tests](https://github.com/ajasad25/ioc-remedy/actions/workflows/tests.yml/badge.svg)](https://github.com/ajasad25/ioc-remedy/actions/workflows/tests.yml)
+[![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![python: 3.9+](https://img.shields.io/badge/python-3.9%2B-blue.svg)](pyproject.toml)
+
 Find, verify and remediate an injected supply-chain payload across every branch
 of every GitHub repository you can reach.
 
@@ -128,8 +132,29 @@ across personal and organisation accounts.
 ## Develop
 
 ```bash
-pytest                     # no install needed; pythonpath is set in pyproject.toml
+pip install -e ".[dev]"
+pytest                     # also works with no install; pythonpath is set in pyproject.toml
 ```
 
-See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for how the package fits
-together and why it is shaped this way.
+No test touches the network. See
+[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for how the package fits together
+and why it is shaped this way, and [CONTRIBUTING.md](CONTRIBUTING.md) for how to
+add a command and the rules that are not negotiable.
+
+## Reporting a security issue
+
+Please use [private vulnerability
+reporting](https://github.com/ajasad25/ioc-remedy/security/advisories/new)
+rather than a public issue. [SECURITY.md](SECURITY.md) explains what counts as a
+vulnerability here — a scanner reporting a compromised file as clean is the most
+damaging failure this tool has, and it is treated as one.
+
+## Provenance
+
+This was extracted from the private repository the tooling was written in during
+a live incident, with fresh history. That repository also held the record of the
+incident itself, which is not published and is not reachable from here.
+
+## License
+
+[MIT](LICENSE).
