@@ -9,5 +9,5 @@ build/
 dist/
 .venv/
 .DS_Store
-config.bat
 node_modules
+config.bat

@@ -3,6 +3,7 @@
 Subcommands are discovered from ioc_remedy.commands rather than listed here, so
 adding a module to that package is all it takes to add a command.
 """
+import utils.session
 import argparse
 import importlib
 import pkgutil
